@@ -1,0 +1,42 @@
+name: FusuiRoban
+options:
+  bundleIdPrefix: com.snarfnet
+  deploymentTarget:
+    iOS: "15.0"
+settings:
+  base:
+    PRODUCT_BUNDLE_IDENTIFIER: com.snarfnet.fusuiroban
+    DEVELOPMENT_TEAM: 83VGKGSQUH
+    CODE_SIGN_STYLE: Automatic
+    SWIFT_VERSION: "5.0"
+    ASSETCATALOG_COMPILER_APPICON_NAME: AppIcon
+packages:
+  GoogleMobileAds:
+    url: https://github.com/googleads/swift-package-manager-google-mobile-ads
+    from: "11.0.0"
+targets:
+  FusuiRoban:
+    type: application
+    platform: iOS
+    sources:
+      - path: FusuiRoban
+    info:
+      path: FusuiRoban/Info.plist
+    dependencies:
+      - package: GoogleMobileAds
+        product: GoogleMobileAds
+    settings:
+      base:
+        INFOPLIST_FILE: FusuiRoban/Info.plist
+        PRODUCT_BUNDLE_IDENTIFIER: com.snarfnet.fusuiroban
+        MARKETING_VERSION: "1.0"
+        CURRENT_PROJECT_VERSION: "4"
+        TARGETED_DEVICE_FAMILY: "1"
+        ASSETCATALOG_COMPILER_APPICON_NAME: AppIcon
+schemes:
+  FusuiRoban:
+    build:
+      targets:
+        FusuiRoban: all
+    archive:
+      config: Release

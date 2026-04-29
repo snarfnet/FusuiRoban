@@ -1,0 +1,11 @@
+build/
+exports/
+*.xcarchive
+*.ipa
+*.p12
+*.p8
+DerivedData/
+*.xcuserstate
+xcuserdata/
+.DS_Store
+*.xcodeproj/
