@@ -6,10 +6,10 @@ struct BannerAdView: UIViewRepresentable {
     func makeUIView(context: Context) -> GADBannerView {
         let banner = GADBannerView(adSize: GADAdSizeBanner)
         banner.adUnitID = adUnitID
-        banner.rootViewController = UIApplication.shared.connectedScenes
-            .compactMap { $0 as? UIWindowScene }
-            .filter { $0.activationState == .foregroundActive }
-            .first?.windows.first(where: { $0.isKeyWindow })?.rootViewController
+        if let scene = UIApplication.shared.connectedScenes
+            .first(where: { $0.activationState == .foregroundActive }) as? UIWindowScene {
+            banner.rootViewController = scene.keyWindow?.rootViewController
+        }
         banner.load(GADRequest())
         return banner
     }

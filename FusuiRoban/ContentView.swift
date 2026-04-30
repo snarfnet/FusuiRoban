@@ -274,7 +274,9 @@ class CompassManager: NSObject, ObservableObject, CLLocationManagerDelegate {
         super.init()
         locationManager.delegate = self
         locationManager.requestWhenInUseAuthorization()
-        locationManager.startUpdatingHeading()
+        if CLLocationManager.headingAvailable() {
+            locationManager.startUpdatingHeading()
+        }
     }
 
     func locationManager(_ manager: CLLocationManager, didUpdateHeading newHeading: CLHeading) {
