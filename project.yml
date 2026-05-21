@@ -10,10 +10,7 @@ settings:
     CODE_SIGN_STYLE: Automatic
     SWIFT_VERSION: "5.0"
     ASSETCATALOG_COMPILER_APPICON_NAME: AppIcon
-packages:
-  GoogleMobileAds:
-    url: https://github.com/googleads/swift-package-manager-google-mobile-ads
-    from: "11.0.0"
+packages: {}
 targets:
   FusuiRoban:
     type: application
@@ -22,9 +19,6 @@ targets:
       - path: FusuiRoban
     info:
       path: FusuiRoban/Info.plist
-    dependencies:
-      - package: GoogleMobileAds
-        product: GoogleMobileAds
     settings:
       base:
         INFOPLIST_FILE: FusuiRoban/Info.plist

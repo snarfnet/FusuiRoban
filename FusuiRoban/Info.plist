@@ -33,9 +33,5 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
-	<key>GADApplicationIdentifier</key>
-	<string>ca-app-pub-9404799280370656~6253744312</string>
-	<key>NSUserTrackingUsageDescription</key>
-	<string>パーソナライズ広告のためにデータを使用します</string>
 </dict>
 </plist>
